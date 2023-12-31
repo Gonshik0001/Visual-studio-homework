@@ -1,1 +1,1 @@
-this fileis for .gitignore
+this file is for .gitignore
