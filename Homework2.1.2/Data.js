@@ -3,5 +3,5 @@ let age = 43;
 
 console.log(firstName + ' ' + age);
 console.log (`His name is ${firstName}` )
-typeof {name:'John', age:43}
+typeof {firstNamename:'John', age:43}
 typeof undefined 
