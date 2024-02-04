@@ -27,3 +27,4 @@ expencesExamples.forEach((expenceEx, index) => {
     testCalculationExp(expectedResult[index], expenceEx.yearlyExpences)
 })
 
+
