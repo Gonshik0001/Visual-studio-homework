@@ -23,8 +23,8 @@ const players = [
     ];
 let arrScore = [];
 for (index in players){
-arrScores.push(players[index].scorePoints);
+arrScore.push(players[index].scorePoints);
 
 }
-let maxIndex=arrScores.indexOf(Math.max(...arrScores));
+let maxIndex=arrScore.indexOf(Math.max(...arrScore));
 console.log(`${players[maxIndex].name} has max score `); 
