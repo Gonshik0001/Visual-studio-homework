@@ -1,0 +1,41 @@
+class Button { 
+    constructor(width = 100, height = 30, type = "button", color = "green"){
+      this.width = width;
+      this.height = height;
+      this.type = type;
+      this.color = color;
+      this.props = {
+        propsWidth: this.width,
+        propsHeight: this.height,
+        propsType: this.type,
+        propsColor: this.color
+      };
+    }
+  
+    onClick() {
+      console.log(this.props);
+    }
+  }
+  
+  function testButton(expectedWidth = 100, expectedHeight = 30, expectedType = "button", expectedColor = "green") {
+    let ourButton = new Button();
+    ourButton.onClick();
+  
+    let customButton = new Button(expectedWidth, expectedHeight, expectedType, expectedColor);
+    customButton.onClick();
+  
+    if ( 
+      ourButton.width === customButton.width &&
+      ourButton.height === customButton.height &&
+      ourButton.type === customButton.type &&
+      ourButton.color === customButton.color
+    ) {
+      console.log("Button has been created correctly");
+    } else {
+      console.log("Button has been created incorrectly");
+    }   
+  }
+  
+  testButton(); // Test with default values
+  testButton(400, 25, 'Gutton', 'Freen'); // Test with custom values
+  
