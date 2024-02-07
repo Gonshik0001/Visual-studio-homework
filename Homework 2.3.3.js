@@ -6,7 +6,7 @@ let shipmentId = "1432HGF"
 
 let smsCode = "A001DFX0";
 
-function giveShipment(smsCode, codeBase, balance, price, postomate) {
+function giveShipment() {
   if (smsCode === codeBase &&balance>=price) {
     balance -=price
     console.log(`Заберите посылку ${shipmentId} из Ячейки №${postomate.indexOf(shipmentId)+1}.
@@ -17,4 +17,4 @@ function giveShipment(smsCode, codeBase, balance, price, postomate) {
   }
 
 
-giveShipment(smsCode, codeBase, balance,price, postomate)
+giveShipment();
