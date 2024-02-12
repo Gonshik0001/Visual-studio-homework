@@ -5,6 +5,7 @@ function sum(a, b) {
 console.log(sum(4, 8));
 
 // a = 8, b = 10, expected = 18
+// a=0, b=0, expected =0
 
 function assert(expectedResult, actualResult) {
   if (expectedResult === actualResult) {
@@ -17,3 +18,5 @@ function assert(expectedResult, actualResult) {
 }
 
 assert(18, sum(4, 8));
+
+module.exports = sum;
