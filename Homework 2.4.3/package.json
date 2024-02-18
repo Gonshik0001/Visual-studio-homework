@@ -1,15 +1,8 @@
 {
-  "name": "c",
+  "name": "homework-2.4.3",
   "version": "1.0.0",
+  "description": "Создаем папку\r в терминале пишем команду npm init - в графе test - пишем jest\r npm install\r npm add jest\r После написания теста  - npm run test",
   "main": "homework 2.4.3.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^29.7.0"
-  },
   "dependencies": {
     "ansi-escapes": "^4.3.2",
     "ansi-regex": "^5.0.1",
@@ -91,6 +84,7 @@
     "istanbul-lib-report": "^3.0.1",
     "istanbul-lib-source-maps": "^4.0.1",
     "istanbul-reports": "^3.1.6",
+    "jest": "^29.7.0",
     "jest-changed-files": "^29.7.0",
     "jest-circus": "^29.7.0",
     "jest-cli": "^29.7.0",
@@ -199,5 +193,11 @@
     "yargs-parser": "^21.1.1",
     "yocto-queue": "^0.1.0"
   },
-  "description": ""
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC"
 }
