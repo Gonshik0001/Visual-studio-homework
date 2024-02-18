@@ -55,6 +55,6 @@ const studentsWithNoScores = [
   { name: 'Olga' },
   { name: 'Stepan' },
   { name: 'Oleg' },
-  { name: 'Zanna' },
+  { name: 'Zanna' }, 
 ];
 expect(() => findTopStudent([studentsWithNoScores])).toThrow('No valid students found.');

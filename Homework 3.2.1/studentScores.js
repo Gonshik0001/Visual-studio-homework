@@ -25,7 +25,7 @@ function findTopStudent(students) {
       throw new Error('No valid students found.');
     }
   
-    return topStudent;
+    return topStudent;   
   }
   
   module.exports = findTopStudent;
