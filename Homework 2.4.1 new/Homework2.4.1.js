@@ -6,5 +6,5 @@ const calculateBonus = (a, b) => {
     debugger; //проверка будет ли предоставлен бонус (если сумма больше 50)
     return bonus;
     };
-    calculateBonus (28,35);
     calculateBonus (27,35);
+   

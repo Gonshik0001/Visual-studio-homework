@@ -1,4 +1,4 @@
-const calculateBonus = require('./yourScript'); // Замените 'yourScript' на фактический путь к вашему скрипту
+const calculateBonus = require('./Calculate_bonus_test.js'); 
 
 // Тестирование, когда сумма больше 50
 test('calculateBonus returns 50 when sum is greater than 50', () => {
