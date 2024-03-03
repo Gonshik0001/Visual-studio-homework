@@ -1,36 +1,31 @@
-// Импорт функции findTopStudentWithDates
-const findTopStudentWithDates = require('./findTopStudentWithDates');
+function calculateBestStudents(studentGroups){
+  let maxScore = -Infinity;
+  let earliestDate = new Date().getTime();
+  let studentsNames = [];
 
-// Тестирование функции findTopStudentWithDates
-test('findTopStudentWithDates returns the student with the highest score and the latest date', () => {
-  const studentGroups = [
-    [
-      { "name": "Ivan", "score": 35, "date": "2022-10-11" },
-      { "name": "Maria", "score": 5, "date": "2022-10-10" },
-      { "name": "Olga", "score": 0, "date": "" },
-      { "name": "Stepan", "score": 35, "date": "2022-10-12" },
-      { "name": "Oleg", "score": 9, "date": "2022-10-01" },
-      { "name": "Zanna", "score": 15, "date": "2022-10-11" }
-    ],
-    // ... другие группы студентов
-  ];
+  studentGroups.forEach((studentData) => {
+    let currentDate = new Date(studentData.date).getTime();
+    
+    if(studentData.score > maxScore) {
+      maxScore = studentData.score;
+      earliestDate = currentDate;
+      studentsNames = [];
+      studentsNames.push(studentData.name);
+    } else if (studentData.score == maxScore && currentDate == earliestDate)
+    studentsNames.push(studentData.name);
+    else if (studentData.score == maxScore && currentDate < earliestDate){
+        earliestDate = currentDate;
+        studentsNames = [];
+        studentsNames.push(studentData.name);
+    }
+} )
+    if (maxScore == 0) {
+        studentsNames = [];
+        console.log(`no winners`)
+    }
+    console.log(`Congratulations to ${studentsNames}`)
+  return studentsNames;  
+}
 
-  expect(findTopStudentWithDates(studentGroups)).toEqual({ name: 'Ivan', score: 35, date: '2022-10-12' });
-});
+module.exports = calculateBestStudents;
 
-// Дополнительные тесты для обработки дат
-// ...
-
-// Тестирование сценария, когда нет валидных студентов
-test('findTopStudentWithDates throws an error when no valid students are found', () => {
-  const studentsWithNoScores = [
-    { name: 'Ivan' },
-    { name: 'Maria' },
-    { name: 'Olga' },
-    { name: 'Stepan' },
-    { name: 'Oleg' },
-    { name: 'Zanna' }, 
-  ];
-  expect(() => findTopStudentWithDates([studentsWithNoScores])).toThrow('No valid students found.');
-});
-module.exports = findTopStudentWithDates
