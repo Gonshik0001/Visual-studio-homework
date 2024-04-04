@@ -4,8 +4,8 @@
   "description": "",
   "main": "cypress.js",
   "scripts": {
-    "cy:open": "npm cypress open",
-    "cy:run": "npm cypress run"
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
   },
   "author": "",
   "license": "ISC",
