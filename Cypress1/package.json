@@ -5,8 +5,11 @@
   "main": "cypress.js",
   "scripts": {
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run"
-     },
+    "cy:run": "npx cypress run",
+    "cy:run:first": "npm run cy:run -- --browser chrome --spec 'cypress/e2e/3-SQLVeriier/verifiertest.cy.js'",
+    "cy:run:second": "npm run cy:run -- --browser electron --spec 'cypress/e2e/3-SQLVeriier/verifiertest.cy.js'",
+    "cy:run:all": "npm run cy:run:first && npm run cy:run:second"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
