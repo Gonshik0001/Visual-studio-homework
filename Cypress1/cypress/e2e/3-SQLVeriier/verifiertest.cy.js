@@ -4,9 +4,3 @@ describe('Verifier Page Load Test', () => {
   cy.get('.nav-link.active').should('exist');
 });
 })
-
-//describe('Verifier Page Load Test', () => {
-  //it('successfully loads Verifier page', () => {
-//      cy.loadAndCheckPage('https://sqlverifier-live-6e21ca0ed768.herokuapp.com/', '.nav-link.active');
-//  });
-//});

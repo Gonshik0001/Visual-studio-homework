@@ -1,7 +1,10 @@
 describe('Verifier Page Load Test', () => {
-    it('successfully loads Verifier page', () => {
+  before(() => {
+      // Переход на страницу происходит один раз перед всеми тестами в этом блоке
       cy.visit('https://sqlverifier-live-6e21ca0ed768.herokuapp.com/');
-      cy.get('.nav-link.active').should('exist');
-    });
   });
-  
+
+  it('successfully loads Verifier page', () => {
+      cy.get('.nav-link.active').should('exist');
+  });
+})
