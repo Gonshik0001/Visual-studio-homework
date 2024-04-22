@@ -1,3 +1,14 @@
+Cypress.Commands.add('login', (username, password) => {
+    cy.visit('/login');
+    cy.get('input[name=username]').type(username);
+    cy.get('input[name=password]').type(password);
+    cy.get('form').submit();
+});
+Cypress.Commands.add('loadAndCheckPage', (url, selector) => {
+    cy.visit(url);
+    cy.get(selector).should('exist');
+});
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
