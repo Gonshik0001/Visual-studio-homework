@@ -1,8 +1,8 @@
 {
-    "baseUrl": "https://sqlverifier-staging-08050d656f7a.herokuapp.com/account/register",
+    "baseUrl": "baseUrl": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com",
     "env": {
-      "username": "staging_user",
-      "password": "staging_password"
+      "username": "tester3",
+      "password": "Aliska1!"
     }
   }
   
