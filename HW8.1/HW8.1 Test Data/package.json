@@ -1,0 +1,36 @@
+{
+  "name": "hw8.1-test-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "cypress run", // It can be any cypress command with any argument
+  "cy:parallel" : "cypress-parallel -s cy:run -t 2 -d <your-cypress-specs-folder> -a '\"<your-cypress-cmd-args>\"'",
+    "start": "webpack serve --open",
+    "testFolder1Chrome": "cypress run --config-file cypress.config.13inch.js --browser chrome --spec \"e2e/*.spec.js\"",
+    "testFolder2Electron": "cypress run --config-file cypress.config.24inch.js --browser electron --spec \"e2e/*.spec.js\"",
+    "testParallel": "cypress-parallel --record --key 0c1e4465-103b-4e78-9ffb-3378002eb1c6"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.1",
+    "cypress": "^13.9.0",
+    "cypress-parallel": "^0.14.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
