@@ -16,6 +16,8 @@ function queryTestDb(query, config) {
 }
 
 module.exports = defineConfig({
+  projectId: "odtwnb",
+
   env: {
     db: {
       host: "db4free.net",
@@ -24,6 +26,7 @@ module.exports = defineConfig({
       database: "it_switcher",
     },
   },
+
   e2e: {
     setupNodeEvents(on, config) {
       on("task", {
@@ -31,6 +34,13 @@ module.exports = defineConfig({
           return queryTestDb(query, config);
         },
       });
+    },
+  },
+
+  component: {
+    devServer: {
+      framework: "react",
+      bundler: "webpack",
     },
   },
 });
